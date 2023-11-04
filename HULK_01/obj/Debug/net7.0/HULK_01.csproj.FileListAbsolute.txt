@@ -1,0 +1,14 @@
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\bin\Debug\net7.0\HULK_01.exe
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\bin\Debug\net7.0\HULK_01.deps.json
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\bin\Debug\net7.0\HULK_01.runtimeconfig.json
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\bin\Debug\net7.0\HULK_01.dll
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\bin\Debug\net7.0\HULK_01.pdb
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.AssemblyInfoInputs.cache
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.AssemblyInfo.cs
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.dll
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\refint\HULK_01.dll
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.pdb
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\HULK_01.genruntimeconfig.cache
+C:\Users\Carlos Daniel\Desktop\Hulk\HULK_01\HULK_01\obj\Debug\net7.0\ref\HULK_01.dll
