@@ -19,7 +19,7 @@ namespace HULK_01
                 {
                     if (tokens[i] == "else")
                     {
-                        string tof = If_Else_Tokenizer.Condition(tokens[idx].Substring(1, tokens[idx].Length - 2));
+                        string tof = Boolean_Tokenizer.TrueOrFalse(tokens[idx].Substring(1, tokens[idx].Length - 2));
                         //Si la condición es verdadera se parsea entre la condición y el 'else'
                         if (tof == "true")
                         {

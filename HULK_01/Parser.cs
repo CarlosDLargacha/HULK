@@ -44,11 +44,14 @@ namespace HULK_01
         internal static string Begin_Parser(List<string> tokens_parser, int index, int caller_id)
         {  
             double numericValue;
+
             //
             if(index >= tokens_parser.Count && tokens_parser.Count == 1) { return tokens_parser[0]; }
 
             //
             if(caller_id == 5 && index == tokens_parser.Count) { Let_In_Parser.comma_or_in = 3; return ""; }
+
+            if(tokens_parser.Count == index && tokens_parser.Count != 1) { return Check_Math_Expression.Check(tokens_parser, 0, 0); }
 
             //Si el token es la palabra reservada 'let' se llama al método LetInParser
             if (tokens_parser[index] == "let")
@@ -104,8 +107,16 @@ namespace HULK_01
                 return result;
             }
 
-            //Si el token es la palabra reservada 'function' se llama al método FunctionParser
-            if (tokens_parser[index] == "function")
+            //Se comprueba si el token es un operador booleano
+            if (tokens_parser[index] == "<" || tokens_parser[index] == ">" || tokens_parser[index] == "=" || tokens_parser[index] == "<")
+            {
+                string boolean = String.Join("", tokens_parser);
+                string tof = Boolean_Tokenizer.TrueOrFalse(boolean);
+                return tof;
+            }
+
+                //Si el token es la palabra reservada 'function' se llama al método FunctionParser
+                if (tokens_parser[index] == "function")
             {
                 if (caller_id == 5) { return "!SEMANTIC ERROR a variable can not be equal to 'if'"; }
                 if (caller_id == 4) { return "!SEMANTIC ERROR a function can not be added to an string"; }

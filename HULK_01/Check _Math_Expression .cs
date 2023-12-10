@@ -39,17 +39,17 @@ namespace HULK_01
                 if (index == 0 || index == tokens.Count - 1) { return "!SYNTAX ERROR: missing number"; }
                 else 
                 {
-                    if (double.TryParse(tokens[index - 1], out numericValue) == false && tokens[index - 1] != ")") { return "!SYNTAX ERROR: missing number"; }
-                    if (double.TryParse(tokens[index + 1], out numericValue) == false && tokens[index + 1] != "(") { return "!SYNTAX ERROR: missing number"; }
+                    if (double.TryParse(tokens[index - 1], out numericValue) == false && tokens[index - 1] != ")") { return "!SYNTAX ERROR: string can not be operated with a number"; }
+                    if (double.TryParse(tokens[index + 1], out numericValue) == false && tokens[index + 1] != "(") { return "!SYNTAX ERROR: string can not be operated with a number"; }
                 }
             }
             if (tokens[index] == "-")
             {
-                if (index == tokens.Count - 1) { return "!SYNTAX ERROR: missing number"; }
+                if (index == tokens.Count - 1) { return "!SYNTAX ERROR: missing number after (-) operator"; }
                 else
                 {
-                    if (index > 0) { if (double.TryParse(tokens[index - 1], out numericValue) == false && tokens[index - 1] != ")" && tokens[index - 1] != "(") { return "!SYNTAX ERROR: missing number"; } }
-                    if (double.TryParse(tokens[index + 1], out numericValue) == false && tokens[index + 1] != "(") { return "!SYNTAX ERROR: missing number"; }
+                    if (index > 0) { if (double.TryParse(tokens[index - 1], out numericValue) == false && tokens[index - 1] != ")" && tokens[index - 1] != "(") { return "!SYNTAX ERROR: string can not be operated with a number"; } }
+                    if (double.TryParse(tokens[index + 1], out numericValue) == false && tokens[index + 1] != "(") { return "!SYNTAX ERROR: string can not be operated with a number"; }
                 }
             }
 

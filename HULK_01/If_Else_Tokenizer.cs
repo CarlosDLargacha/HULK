@@ -87,7 +87,7 @@ namespace HULK_01
                 if (condition[i] == '<')
                 {
                     left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
-                    right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - 1), 2);
+                    right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - i - 1), 2);
 
                     //Se confirma que ambos miembros son números
                     if (double.TryParse(left, out number) && double.TryParse(left, out number))
