@@ -76,7 +76,7 @@ namespace HULK_01
             //Si el token es una variable se sustituye por su valor
             if (Parser.let_in_variable.Contains(tokens_parser[index]))
             {
-                for(int i = 0; i < let_in_variable.Count; i++)
+                for(int i = let_in_variable.Count - 1; i >= 0; i--)
                 {
                     if (tokens_parser[index] == let_in_variable[i]) { tokens_parser[index] = let_in_value[i]; break; }
                 }
