@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[margin=2cm]{geometry}
+
+\begin{document}
+
+\title{\textbf{Informe escrito de Proyecto de Programación II: Intérprete para HULK} }
+\author{Carlos Daniel Largacha Leal}
+\date{Grupo C112}
+
+\thispagestyle{empty} 
+\maketitle
+
+\vspace{4cm}
+\begin{center}
+	Primer año de Lic. en Ciencia de la Computación \\ Facultad de Matemática y Computación \\ Universidad de La Habana \\ Curso 2023-2024
+\end{center}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale= 0.53]{R.jpg}
+\end{figure}
+
+\vspace{10pt}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+HULK es un lenguaje de programación imperativo, funcional, estático y fuertemente tipado. Casi todas las instrucciones en HULK son expresiones. En el presente 
+proyecto se implementará un intérprete de un subconjunto, de dicho lenguaje de programación,  compuesto solamente de expresiones que pueden escribirse en una 
+única línea. Cada tipo de expresión del HULK es tratada en clases dedicadas a cada expresión, por lo que abordaremos toda su funcionalidad a la par que explicamos el funcionamiento del 
+intérprete.
+
+\section{Clase Main}
+Esta clase es la encargada de recibir la línea de código introducido por el usuario y de enviarlos a la clase Tokenizer, además de imprimir en pantalla el resultado de procesar la expresión introducida \\ \\
+
+\section{Clase Tokenizer}
+Como su nombre lo indica esta clase es la encargada de separar en tokens la línea de código para facilitar su procesamiento en la clase Parser, en el método tokenizer se van guardando todos los tokens en una lista, también se encarga de revizar si todos los paréntesis están balanceados y de revizar que los tokens de tipo string tengan sus comillas de cierre.\\ \\ 
+
+\section{Clase Parser}
+Esta clase contien las listas donde se almacenan las funciones declaradas y las variables con sus respectivos valores. El método Begin Parser recive la lista de tokens y los analiza para detectar que tipo de expresión tiene que procesar el interprete, en este método se captan la mayoría de los errores, así como se dectecta si un token es invalido al no cumplir con ninguna de las características que busca el método.\\ \\
+
+\section{Clase Let In Parser}
+Se encarga de procesar las expresiones de tipo Let in, en el método AssignVariable se chequea que la expresión sea vádila y posteriormente se guardan los nombres y los valores de las variables asignadas con el let, al termira de procesar la expresión let in las variables y su valor asignado se eliminan. \\  \\ Ejemplo: \\ Let x = 4 in x  + 10; \\ 14 \\ \\ 
+
+\section{Clase Print Parser}
+Confirma que una epresión de tipo print sea válida, envia a la clase Tokenizer el string encerrado en los parénteis. \\ Ejemplo: \\ print("El sentido de la vida"); \\ El sentido de la vida \\ \\
+
+\section{Clase Boolean Tokenizer}
+Clase encarga de procesar las expresiones booleanas\\ \\
+
+\section{Clase If Else Parser}
+Esta clase se encarga de confirmar que las expresiones If else sean válidas y de devolder el resultado a corde si la condición es verdadera o falsa.\\ Ejemplo:\\
+If (7 != 3) print(7) else print(3); \\ 7\\ \\
+
+\section{Clase Function Parser y Function Arguments}
+Son las encargadas de procesar las expresiones de tipo function, estas confirman la validez de la expresion y procesen a almacenar las funciones con sus respectiavas variables y argumentos para posteriormente ser usadas en otras líneas de código.\\ Ejemplo: \\ function fib(x) = if(x <= 1) 1 else fib(x - 1) + fib(x - 2); \\ function declared \\ \\
+
+\section{Calse Check Math Expresion}
+Confirma la validez de una expresión aritmética para ser enviada a la clase Arithmetic
+
+\section{Clase Arithmetic}
+Procesa las expresiones aritméticas introducidas en el programa empleando el algoritmo shunting yard
+
+\end{document}
