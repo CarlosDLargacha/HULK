@@ -26,7 +26,7 @@ namespace HULK_01
                 {
                     if (condition[i - 1] == '>')
                     {
-                        left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                        left = Tokenizer.tokenizer(condition.Substring(0, i), 2);
                         right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - 1 -i), 2);
 
                         //Se confirma que ambos miembros son números
@@ -41,7 +41,7 @@ namespace HULK_01
                     }
                     if (condition[i - 1] == '<')
                     {
-                        left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                        left = Tokenizer.tokenizer(condition.Substring(0, i), 2);
                         right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - 1 -i), 2);
 
                         //Se confirma que ambos miembros son números
@@ -56,14 +56,14 @@ namespace HULK_01
                     }
                     if (condition[i - 1] == '!')
                     {
-                        left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                        left = Tokenizer.tokenizer(condition.Substring(0, i), 2);
                         right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - 1 - i), 2);
                         if (left != right) { return "true"; }
                         else { return "false"; }
                     }
                     if (condition[i - 1] == '=')
                     {
-                        left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                        left = Tokenizer.tokenizer(condition.Substring(0, i), 2);
                         right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - 1 - i), 2);
                         if (left == right) { return "true"; }
                         else { return "false"; }
@@ -71,7 +71,7 @@ namespace HULK_01
                 }
                 if (condition[i] == '>')
                 {
-                    left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                    left = Tokenizer.tokenizer(condition.Substring(0, i ), 2);
                     right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - i - 1), 2);
 
                     //Se confirma que ambos miembros son números
@@ -86,7 +86,7 @@ namespace HULK_01
                 }
                 if (condition[i] == '<')
                 {
-                    left = Tokenizer.tokenizer(condition.Substring(0, i - 1), 2);
+                    left = Tokenizer.tokenizer(condition.Substring(0, i), 2);
                     right = Tokenizer.tokenizer(condition.Substring(i + 1, condition.Length - i - 1), 2);
 
                     //Se confirma que ambos miembros son números
